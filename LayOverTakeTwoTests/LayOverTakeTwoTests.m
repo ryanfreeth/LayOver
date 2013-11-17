@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <Parse/Parse.h>
 
 @interface LayOverTakeTwoTests : XCTestCase
 
@@ -18,7 +19,10 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+    [Parse setApplicationId:@"1KJpfgJ67iKJDVktLPk4cFvwN1njyk0PVuLhAd5e"
+                  clientKey:@"oFnYB7UItPQSN6dhGPhT1Voe2HykFMaLRs0v35IH"];
+    
+    }
 
 - (void)tearDown
 {
@@ -28,7 +32,27 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssert(1==1, @"One equals one");
+}
+
+- (void)testLogin
+{
+    [PFUser logInWithUsernameInBackground:@"ryan" password:@"layover"
+                                    block:^(PFUser *user, NSError *error) {
+                                        XCTAssertNotNil(user, @"User is null");
+                                        XCTAssertEqual("ryan", user.username, @"User is ryan!");
+                                    }];
+
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *name = currentUser.username;
+    NSLog(name);
+    XCTAssertEqual(currentUser.username, name, @"User is actually ryan");
+}
+
+- (void)testCheckin
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"airports"];
+    XCTAssertNotNil(query, @"null");
 }
 
 @end
