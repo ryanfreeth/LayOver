@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>Ashish-Agarwal.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>Ashish-Agarwal.LayOver</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -20,7 +20,7 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-    <key>CFBundleURLTypes</key>
+	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -35,7 +35,7 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-    <key>FacebookAppID</key>
+	<key>FacebookAppID</key>
 	<string>546938952049918</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

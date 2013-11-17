@@ -18,6 +18,11 @@
                   clientKey:@"oFnYB7UItPQSN6dhGPhT1Voe2HykFMaLRs0v35IH"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // ****************************************************************************
+    // Your Facebook application id is configured in Info.plist.
+    // ****************************************************************************
+    [PFFacebookUtils initializeFacebook];
+    
     return YES;
 }
 							
