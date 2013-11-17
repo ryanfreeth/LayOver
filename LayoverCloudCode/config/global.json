@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "LayOver": {
+            "applicationId": "1KJpfgJ67iKJDVktLPk4cFvwN1njyk0PVuLhAd5e", 
+            "masterKey": "U8AxYDk4aRFDEXwSlRUAuNUJeT34oPtqevlQdo9t"
+        }, 
+        "_default": {
+            "link": "LayOver"
+        }
+    }
+}
