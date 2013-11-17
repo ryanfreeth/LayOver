@@ -41,7 +41,7 @@
     [self.checkinButton addTarget:self action:@selector(checkInPressed) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.checkinButton];*/
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:21.0 green:76.0 blue:133.0 alpha:1.0];
+    //self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:21.0 green:76.0 blue:133.0 alpha:1.0];
 
     // get from parse
     PFQuery *query = [PFQuery queryWithClassName:@"airports"];
