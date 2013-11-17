@@ -32,8 +32,8 @@
 		8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F3183839DE000473DA /* StoreKit.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
-		8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */; };
 		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
+		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +77,10 @@
 		8FAF00F3183839DE000473DA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8FAF00F4183839DE000473DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8FAF00FE18383C8F000473DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		8FD2D92C1838434A004BCA3E /* EmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailLoginViewController.h; sourceTree = "<group>"; };
-		8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailLoginViewController.m; sourceTree = "<group>"; };
 		8FD2D92F183857D9004BCA3E /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		8FD2D930183857D9004BCA3E /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		8FD2D93218387015004BCA3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FD2D93318388141004BCA3E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */,
 				8FAF00F5183839DE000473DA /* AudioToolbox.framework in Frameworks */,
 				8FAF00F6183839DE000473DA /* CFNetwork.framework in Frameworks */,
 				8FAF00F7183839DE000473DA /* CoreLocation.framework in Frameworks */,
@@ -140,6 +141,7 @@
 		8FAF00B1183835EA000473DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FD2D93318388141004BCA3E /* MapKit.framework */,
 				29436D25183858B9009E7B4E /* FacebookSDK.framework */,
 				8FAF00FE18383C8F000473DA /* Parse.framework */,
 				8FAF00EC183839DE000473DA /* AudioToolbox.framework */,
@@ -167,8 +169,6 @@
 				8FAF00C4183835EA000473DA /* Main.storyboard */,
 				8FD2D92F183857D9004BCA3E /* CheckInViewController.h */,
 				8FD2D930183857D9004BCA3E /* CheckInViewController.m */,
-				8FD2D92C1838434A004BCA3E /* EmailLoginViewController.h */,
-				8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */,
 				8FAF00E7183837BE000473DA /* LoginScreenViewController.h */,
 				8FAF00E8183837BE000473DA /* LoginScreenViewController.m */,
 				8FAF00CA183835EA000473DA /* Images.xcassets */,
@@ -305,7 +305,6 @@
 			files = (
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
 				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
-				8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
 			);
@@ -342,6 +341,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FAF00C5183835EA000473DA /* Base */,
+				8FD2D93218387015004BCA3E /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

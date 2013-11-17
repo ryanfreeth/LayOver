@@ -15,11 +15,9 @@
 
 @interface LoginScreenViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *loginWithFacebook;
-@property (strong, nonatomic) IBOutlet UIButton *loginEmailButton;
 @property (strong, nonatomic) IBOutlet UIButton *registerEmailButton;
 
 -(IBAction)loginWithFacebookPressed : (id)sender;
--(IBAction)loginEmailButton:(id)sender;
 -(IBAction)registerEmailButton:(id)sender;
 
 @end
@@ -46,10 +44,6 @@
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     [testObject setObject:@"bar" forKey:@"username"];
     [testObject save];
-}
-
--(IBAction)loginEmailButton:(id)sender{
-
 }
 
 
@@ -111,6 +105,8 @@
         //save the username in the NSUserdefaults
         
         [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"userID"];
+   
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         [self dismissModalViewControllerAnimated:YES];
         
@@ -148,6 +144,9 @@
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
     
     //push to the next screen

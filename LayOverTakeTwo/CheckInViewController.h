@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface CheckInViewController : UIViewController
+@interface CheckInViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+-(IBAction)checkInPressed;
 
 @end
