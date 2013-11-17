@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Login Screen View Controller-->
@@ -101,7 +101,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-WW-aaj">
                                 <rect key="frame" x="0.0" y="511" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Check In">
+                                <state key="normal" title="Continue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -149,6 +149,7 @@
                     <navigationItem key="navigationItem" id="Ead-Tv-usf"/>
                     <connections>
                         <outlet property="usersTable" destination="deQ-xT-hBh" id="xwd-1g-Quc"/>
+
                         <segue destination="6Yz-Eh-N9G" kind="push" identifier="pushProfile" id="Ix3-tb-vDL"/>
                     </connections>
                 </viewController>
@@ -235,7 +236,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRo-P8-1rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="246"/>
+
+            <point key="canvasLocation" x="1990" y="901"/>
         </scene>
         <!--Meetup View Controller-->
         <scene sceneID="5RR-qv-6zT">
@@ -248,12 +250,54 @@
                     <view key="view" contentMode="scaleToFill" id="aFt-x1-Rib">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xrE-Os-QcE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hPp-My-Hli" id="qK4-lf-krB"/>
+                                    <outlet property="delegate" destination="hPp-My-Hli" id="sYi-YD-Wia"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pFo-Ms-iKT"/>
+                    <connections>
+                        <outlet property="vendorLocations" destination="xrE-Os-QcE" id="e7d-hN-PvB"/>
+                        <segue destination="oJB-WL-KXL" kind="push" identifier="detailMeetupSegue" id="kYR-IB-ElP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLi-zw-ecm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2568" y="240"/>
+
+            <point key="canvasLocation" x="1656" y="195"/>
+        </scene>
+        <!--Meetup Detail View Controller-->
+        <scene sceneID="MCP-ev-FR3">
+            <objects>
+                <viewController id="oJB-WL-KXL" customClass="MeetupDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9eW-xW-7Y7"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOf-Li-U0N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JtP-tV-pVT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-yG-Bfs">
+                                <rect key="frame" x="0.0" y="65" width="320" height="286"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CPo-Cj-bNG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0e-fb-Wa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075" y="200"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="0EF-8W-dwz">

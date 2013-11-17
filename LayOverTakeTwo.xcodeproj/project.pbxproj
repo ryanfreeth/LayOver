@@ -62,6 +62,8 @@
 		8FD2D92E1838434A004BCA3E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
 		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
+		8FE123DA18393220001578DE /* MeetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE123D918393220001578DE /* MeetupViewController.m */; };
+		8FE123DD183938A5001578DE /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE123DC183938A5001578DE /* MeetupDetailViewController.m */; };
 		94BBB87B183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
 		94BBB87C183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +146,10 @@
 		8FD2D930183857D9004BCA3E /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		8FD2D93218387015004BCA3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FD2D93318388141004BCA3E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8FE123D818393220001578DE /* MeetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupViewController.h; sourceTree = "<group>"; };
+		8FE123D918393220001578DE /* MeetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupViewController.m; sourceTree = "<group>"; };
+		8FE123DB183938A5001578DE /* MeetupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupDetailViewController.h; sourceTree = "<group>"; };
+		8FE123DC183938A5001578DE /* MeetupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupDetailViewController.m; sourceTree = "<group>"; };
 		94BBB87A183891AF00B99F8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +247,10 @@
 				8FD2D930183857D9004BCA3E /* CheckInViewController.m */,
 				8FAF00E7183837BE000473DA /* LoginScreenViewController.h */,
 				8FAF00E8183837BE000473DA /* LoginScreenViewController.m */,
+				8FE123D818393220001578DE /* MeetupViewController.h */,
+				8FE123D918393220001578DE /* MeetupViewController.m */,
+				8FE123DB183938A5001578DE /* MeetupDetailViewController.h */,
+				8FE123DC183938A5001578DE /* MeetupDetailViewController.m */,
 				29436D39183906AE009E7B4E /* ParseSignupViewController.h */,
 				29436D3A183906AE009E7B4E /* ParseSignupViewController.m */,
 				8FB988BD1838B28900E804B6 /* ViewProfilesViewController.h */,
@@ -433,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE123DA18393220001578DE /* MeetupViewController.m in Sources */,
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
 				8FB988C71838DB4700E804B6 /* ChatCell.m in Sources */,
 				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
@@ -443,6 +454,7 @@
 				8FB988BF1838B28900E804B6 /* ViewProfilesViewController.m in Sources */,
 				8FB988C41838D9A700E804B6 /* ChatRoomViewController.m in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
+				8FE123DD183938A5001578DE /* MeetupDetailViewController.m in Sources */,
 				29436D3B183906AE009E7B4E /* ParseSignupViewController.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
 			);

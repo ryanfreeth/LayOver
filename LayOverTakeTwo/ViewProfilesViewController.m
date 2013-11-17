@@ -96,6 +96,9 @@
     //self.navigationController
     self.selectedRowIndex = indexPath.row;
     [self performSegueWithIdentifier:@"pushProfile" sender:self];
+
+    //[self performSegueWithIdentifier:@"findMeetupSegue" sender:self];
+
 }
 
 - (void)didReceiveMemoryWarning

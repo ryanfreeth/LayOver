@@ -17,7 +17,8 @@
 //@property (strong, nonatomic) IBOutlet UIButton *checkinButton;
 @property (nonatomic) NSInteger selectedRow;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) IBOutlet UIButton *checkinButton;
+@property (strong, nonatomic) IBOutlet UIButton *checkinButton; //now called continue
+
 
 @end
 
