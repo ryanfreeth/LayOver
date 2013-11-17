@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		29398DA018393AB100DF34E4 /* planeUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 29398D9E18393AB100DF34E4 /* planeUp.png */; };
 		29398DA118393AB100DF34E4 /* planeDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 29398D9F18393AB100DF34E4 /* planeDown.png */; };
-		29398DA31839434B00DF34E4 /* handshake.png in Resources */ = {isa = PBXBuildFile; fileRef = 29398DA21839434B00DF34E4 /* handshake.png */; };
+		29398DA9183958B700DF34E4 /* chatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29398DA7183958B700DF34E4 /* chatIcon.png */; };
+		29398DAA183958B700DF34E4 /* handshake.png in Resources */ = {isa = PBXBuildFile; fileRef = 29398DA8183958B700DF34E4 /* handshake.png */; };
 		29436D26183858B9009E7B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29436D25183858B9009E7B4E /* FacebookSDK.framework */; };
 		29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29436D2818387CCF009E7B4E /* ProfileViewController.m */; };
 		29436D2F1838B44E009E7B4E /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2C1838B44E009E7B4E /* facebookButton.png */; };
@@ -28,7 +29,6 @@
 		29436D4B183914AC009E7B4E /* profileBG3.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D42183914AC009E7B4E /* profileBG3.png */; };
 		29436D4C183914AC009E7B4E /* profileBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D43183914AC009E7B4E /* profileBG2.png */; };
 		29436D4D183914AC009E7B4E /* profileBG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D44183914AC009E7B4E /* profileBG1.png */; };
-		29436D5118391DC9009E7B4E /* chatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D5018391DC9009E7B4E /* chatIcon.png */; };
 		29436D5418391DEC009E7B4E /* inbound.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D5218391DEC009E7B4E /* inbound.png */; };
 		29436D5518391DEC009E7B4E /* outbound.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D5318391DEC009E7B4E /* outbound.png */; };
 		2997CA491839338B00515514 /* UnknownProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 2997CA481839338B00515514 /* UnknownProfile.png */; };
@@ -81,7 +81,8 @@
 /* Begin PBXFileReference section */
 		29398D9E18393AB100DF34E4 /* planeUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeUp.png; sourceTree = "<group>"; };
 		29398D9F18393AB100DF34E4 /* planeDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planeDown.png; sourceTree = "<group>"; };
-		29398DA21839434B00DF34E4 /* handshake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handshake.png; sourceTree = "<group>"; };
+		29398DA7183958B700DF34E4 /* chatIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatIcon.png; sourceTree = "<group>"; };
+		29398DA8183958B700DF34E4 /* handshake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handshake.png; sourceTree = "<group>"; };
 		29436D25183858B9009E7B4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		29436D2718387CCE009E7B4E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		29436D2818387CCF009E7B4E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		29436D42183914AC009E7B4E /* profileBG3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBG3.png; sourceTree = "<group>"; };
 		29436D43183914AC009E7B4E /* profileBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBG2.png; sourceTree = "<group>"; };
 		29436D44183914AC009E7B4E /* profileBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBG1.png; sourceTree = "<group>"; };
-		29436D5018391DC9009E7B4E /* chatIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatIcon.png; sourceTree = "<group>"; };
 		29436D5218391DEC009E7B4E /* inbound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbound.png; sourceTree = "<group>"; };
 		29436D5318391DEC009E7B4E /* outbound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outbound.png; sourceTree = "<group>"; };
 		2997CA481839338B00515514 /* UnknownProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownProfile.png; sourceTree = "<group>"; };
@@ -273,11 +273,11 @@
 				29436D3C183914AC009E7B4E /* profileBG9.png */,
 				29436D3D183914AC009E7B4E /* profileBG8.png */,
 				29436D3E183914AC009E7B4E /* profileBG7.png */,
-				29436D5018391DC9009E7B4E /* chatIcon.png */,
 				29436D5218391DEC009E7B4E /* inbound.png */,
 				29398D9E18393AB100DF34E4 /* planeUp.png */,
-				29398DA21839434B00DF34E4 /* handshake.png */,
 				29398D9F18393AB100DF34E4 /* planeDown.png */,
+				29398DA7183958B700DF34E4 /* chatIcon.png */,
+				29398DA8183958B700DF34E4 /* handshake.png */,
 				29436D5318391DEC009E7B4E /* outbound.png */,
 				29436D3F183914AC009E7B4E /* profileBG6.png */,
 				2997CA481839338B00515514 /* UnknownProfile.png */,
@@ -403,6 +403,7 @@
 			files = (
 				29436D331838B9B9009E7B4E /* startupShort.png in Resources */,
 				29436D47183914AC009E7B4E /* profileBG7.png in Resources */,
+				29398DA9183958B700DF34E4 /* chatIcon.png in Resources */,
 				8FAF00CB183835EA000473DA /* Images.xcassets in Resources */,
 				29436D5518391DEC009E7B4E /* outbound.png in Resources */,
 				29436D45183914AC009E7B4E /* profileBG9.png in Resources */,
@@ -422,9 +423,8 @@
 				29398DA018393AB100DF34E4 /* planeUp.png in Resources */,
 				29436D46183914AC009E7B4E /* profileBG8.png in Resources */,
 				2997CA491839338B00515514 /* UnknownProfile.png in Resources */,
-				29436D5118391DC9009E7B4E /* chatIcon.png in Resources */,
 				29436D4B183914AC009E7B4E /* profileBG3.png in Resources */,
-				29398DA31839434B00DF34E4 /* handshake.png in Resources */,
+				29398DAA183958B700DF34E4 /* handshake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

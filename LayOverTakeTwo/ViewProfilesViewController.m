@@ -53,19 +53,28 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (!self.userList) return nil;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell; //= [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10 , 75, 75)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10 , 80, 80)];
     [imageView setImage:[UIImage imageNamed:@"UnknownProfile.png"]];
     [cell.contentView addSubview:imageView];
     
     PFUser *userObject = [self.userList objectAtIndex:indexPath.row];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 220, 20)];
     
-    label.text = [NSString stringWithFormat:@"%@", [userObject objectForKey:@"username"]];
+    NSString *string;
+    if ([userObject objectForKey:@"name"]) {
+        //use facebook
+        string = [NSString stringWithFormat:@"%@", [userObject objectForKey:@"name"]];
+    }
+    else {
+        string = [NSString stringWithFormat:@"%@", [userObject objectForKey:@"username"]];
+    }
+    
+    label.text = string;
     label.numberOfLines = 1;
     [cell.contentView addSubview:label];
     
@@ -82,6 +91,8 @@
     
     return cell;
 }
+
+
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"pushProfile"]) {

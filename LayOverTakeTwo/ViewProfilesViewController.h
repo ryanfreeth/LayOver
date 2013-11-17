@@ -10,4 +10,6 @@
 
 @interface ViewProfilesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) NSMutableData *imageData;
+
 @end

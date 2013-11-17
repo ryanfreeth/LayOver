@@ -15,6 +15,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        self.textString = @"";
+        self.textLabel.text = @"";
+        self.timeLabel.text = @"";
     }
     return self;
 }

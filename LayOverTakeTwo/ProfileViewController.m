@@ -46,13 +46,21 @@
     self.navigationItem.rightBarButtonItem = logoutButton;*/
     
     // If the user is already logged in, display any previously cached values before we get the latest from Facebook.
-    if ([PFUser currentUser]) {
-        [self updateProfile];
-    }
+    //only for my profile
+    //if ([PFUser currentUser]) {
+      //  [self updateProfile];
+    //}
+    //only for my profile
+    
+    [self updateProfile: self.userObject];
+    
+    //NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", self.userObject objectForKey[@"authData"];
     
     //TODO: check if user logged in with facebook first
     // Send request to Facebook
-    FBRequest *request = [FBRequest requestForMe];
+    //only for my profile
+    
+    /*FBRequest *request = [FBRequest requestForCustomAudienceThirdPartyID:nil];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         // handle response
         if (!error) {
@@ -97,7 +105,7 @@
             [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
             [[PFUser currentUser] saveInBackground];
             
-            [self updateProfile];
+            [self updateProfile: self.userObject];
         } else if ([[[[error userInfo] objectForKey:@"error"] objectForKey:@"type"]
                     isEqualToString: @"OAuthException"]) { // Since the request failed, we can check if it was due to an invalid session
             NSLog(@"The facebook session was invalidated");
@@ -105,7 +113,7 @@
         } else {
             NSLog(@"Some other error: %@", error);
         }
-    }];
+    }]; */
 
 }
 
@@ -145,25 +153,25 @@
 #pragma mark - Helper methods
 
 // Set received values if they are not nil and reload the table
-- (void)updateProfile {
-    if ([[PFUser currentUser] objectForKey:@"profile"][@"location"]) {
-        self.locationLabel = [[PFUser currentUser] objectForKey:@"profile"][@"location"];
+- (void)updateProfile: (PFUser *)user {
+    if ([self.userObject objectForKey:@"profile"][@"location"]) {
+        self.locationLabel = [self.userObject objectForKey:@"profile"][@"location"];
     }
     
-    if ([[PFUser currentUser] objectForKey:@"profile"][@"gender"]) {
-        self.genderLabel =  [[PFUser currentUser] objectForKey:@"profile"][@"gender"];
+    if ([self.userObject objectForKey:@"profile"][@"gender"]) {
+        self.genderLabel =  [self.userObject objectForKey:@"profile"][@"gender"];
     }
     
     // Set the name in the view label
-    if ([[PFUser currentUser] objectForKey:@"profile"][@"name"]) {
-        self.userNameLabel.text = [[PFUser currentUser] objectForKey:@"profile"][@"name"];
+    if ([self.userObject objectForKey:@"profile"][@"name"]) {
+        self.userNameLabel.text = [self.userObject objectForKey:@"profile"][@"name"];
     }
     
     // Download the user's facebook profile picture
     self.imageData = [[NSMutableData alloc] init]; // the data will be loaded in here
     
-    if ([[PFUser currentUser] objectForKey:@"profile"][@"pictureURL"]) {
-        NSURL *pictureURL = [NSURL URLWithString:[[PFUser currentUser] objectForKey:@"profile"][@"pictureURL"]];
+    if ([self.userObject objectForKey:@"profile"][@"pictureURL"]) {
+        NSURL *pictureURL = [NSURL URLWithString:[self.userObject objectForKey:@"profile"][@"pictureURL"]];
         
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:pictureURL
                                                                   cachePolicy:NSURLRequestUseProtocolCachePolicy
