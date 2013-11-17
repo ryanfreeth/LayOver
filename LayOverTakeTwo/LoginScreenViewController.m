@@ -68,9 +68,12 @@
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
             [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
+            NSLog(@"%@", user.username);
            // [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         } else {
             NSLog(@"User with facebook logged in!");
+            NSLog(@"%@", user.username);
+            [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
           //  [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         }
     }];
