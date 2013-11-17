@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nNp-20-4UR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
     </dependencies>
     <scenes>
         <!--Login Screen View Controller-->
@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginWithFacebookPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZRN-lb-1xm"/>
+                                    <action selector="loginWithFacebookPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kFf-h7-hT6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOf-FE-U5V">
@@ -51,7 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EYg-P8-J0v"/>
                     <connections>
-                        <outlet property="loginWithFacebook" destination="ra6-VY-4QG" id="tDR-1K-iyt"/>
+                        <outlet property="loginWithFacebook" destination="ra6-VY-4QG" id="aVA-zd-yqx"/>
                         <outlet property="registerEmailButton" destination="cOf-FE-U5V" id="2aA-tC-sHL"/>
                         <segue destination="9iF-ib-BoF" kind="push" identifier="pushToCheckIn" id="Ap6-Jn-h2c"/>
                     </connections>
@@ -81,12 +81,23 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gK-2r-IYX">
+                                <rect key="frame" x="130" y="518" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkInPressed" destination="9iF-ib-BoF" eventType="touchUpInside" id="0yM-Lj-ti4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bo4-JT-fcr"/>
                     <connections>
                         <outlet property="airportsTable" destination="yTn-qO-ZQV" id="fty-bv-R0x"/>
+                        <outlet property="checkinButton" destination="0gK-2r-IYX" id="GOO-C2-gNM"/>
                         <outlet property="mapView" destination="tUF-CZ-56q" id="8KL-4o-YMr"/>
                     </connections>
                 </viewController>
@@ -237,7 +248,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x62-gs-ChE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1232" y="-94"/>
-
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

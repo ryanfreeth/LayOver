@@ -36,10 +36,10 @@
 {
     [super viewDidLoad];
     
-    self.checkinButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*self.checkinButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.checkinButton.frame = CGRectMake(0, 504, 320, 64);
     [self.checkinButton addTarget:self action:@selector(checkInPressed) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.checkinButton];
+    [self.view addSubview:self.checkinButton];*/
 
     // get from parse
     self.airports = [[NSMutableArray alloc] initWithObjects: @"BLI - Bellingham Intl.", @"SEA - Seattle-Tacoma Intl.", @" YVR - Vancouver Intl.", @"YXX - Abbottsford Intl.", nil];
@@ -96,6 +96,8 @@
     [testObject setObject:[PFUser currentUser] forKey:@"User"];
     //[testObject setObject:[self.airports objectAtIndex:self.selectedRow] forKey:@"airport"];
     [testObject save];
+    NSLog(@"checkin pressed");
+    
 }
 
 
