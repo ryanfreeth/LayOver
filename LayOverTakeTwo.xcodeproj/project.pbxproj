@@ -32,6 +32,8 @@
 		8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F3183839DE000473DA /* StoreKit.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
+		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */; };
 		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
 		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +146,7 @@
 				8FD2D93318388141004BCA3E /* MapKit.framework */,
 				29436D25183858B9009E7B4E /* FacebookSDK.framework */,
 				8FAF00FE18383C8F000473DA /* Parse.framework */,
+				29436D25183858B9009E7B4E /* FacebookSDK.framework */,
 				8FAF00EC183839DE000473DA /* AudioToolbox.framework */,
 				8FAF00ED183839DE000473DA /* CFNetwork.framework */,
 				8FAF00EE183839DE000473DA /* CoreLocation.framework */,
@@ -434,10 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					.,
-					/Users/artemgoryaev/LayOver,
-				);
+				FRAMEWORK_SEARCH_PATHS = .;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayOverTakeTwo/LayOverTakeTwo-Prefix.pch";
 				INFOPLIST_FILE = "LayOverTakeTwo/LayOverTakeTwo-Info.plist";
@@ -451,10 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					.,
-					/Users/artemgoryaev/LayOver,
-				);
+				FRAMEWORK_SEARCH_PATHS = .;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayOverTakeTwo/LayOverTakeTwo-Prefix.pch";
 				INFOPLIST_FILE = "LayOverTakeTwo/LayOverTakeTwo-Info.plist";
