@@ -30,7 +30,7 @@
 		8FAF00FB183839DE000473DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F2183839DE000473DA /* Security.framework */; };
 		8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F3183839DE000473DA /* StoreKit.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
-		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
+		942D601E1838447400ADA5C2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942D601D1838447400ADA5C2 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		8FAF00F2183839DE000473DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8FAF00F3183839DE000473DA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8FAF00F4183839DE000473DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		8FAF00FE18383C8F000473DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		942D601D1838447400ADA5C2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 				8FAF00F8183839DE000473DA /* libz.1.1.3.dylib in Frameworks */,
 				8FAF00F9183839DE000473DA /* MobileCoreServices.framework in Frameworks */,
 				8FAF00FA183839DE000473DA /* QuartzCore.framework in Frameworks */,
-				8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */,
+				942D601E1838447400ADA5C2 /* Parse.framework in Frameworks */,
 				8FAF00FB183839DE000473DA /* Security.framework in Frameworks */,
 				8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */,
 				8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */,
@@ -131,7 +131,7 @@
 		8FAF00B1183835EA000473DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FAF00FE18383C8F000473DA /* Parse.framework */,
+				942D601D1838447400ADA5C2 /* Parse.framework */,
 				8FAF00EC183839DE000473DA /* AudioToolbox.framework */,
 				8FAF00ED183839DE000473DA /* CFNetwork.framework */,
 				8FAF00EE183839DE000473DA /* CoreLocation.framework */,
@@ -421,6 +421,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Apps/LayOverTakeTwo,
+					/Users/ryan/Dev/LayOver,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayOverTakeTwo/LayOverTakeTwo-Prefix.pch";
@@ -438,6 +439,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Apps/LayOverTakeTwo,
+					/Users/ryan/Dev/LayOver,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayOverTakeTwo/LayOverTakeTwo-Prefix.pch";
@@ -508,6 +510,7 @@
 				8FAF00E3183835EA000473DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FAF00E4183835EA000473DA /* Build configuration list for PBXNativeTarget "LayOverTakeTwoTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +519,7 @@
 				8FAF00E6183835EA000473DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
