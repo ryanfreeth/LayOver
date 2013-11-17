@@ -9,7 +9,7 @@
 #import "ChatCell.h"
 
 @implementation ChatCell
-
+@synthesize userLabel, textLabel, textString, timeLabel;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

@@ -12,6 +12,7 @@
 		29436D2F1838B44E009E7B4E /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2C1838B44E009E7B4E /* facebookButton.png */; };
 		29436D301838B44E009E7B4E /* Start-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2D1838B44E009E7B4E /* Start-up.png */; };
 		29436D311838B44E009E7B4E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2E1838B44E009E7B4E /* logo.png */; };
+		8F5F6F2E183917260052DE9D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5F6F2D183917260052DE9D /* Reachability.m */; };
 		8FAF00B3183835EA000473DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B2183835EA000473DA /* Foundation.framework */; };
 		8FAF00B5183835EA000473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B4183835EA000473DA /* CoreGraphics.framework */; };
 		8FAF00B7183835EA000473DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B6183835EA000473DA /* UIKit.framework */; };
@@ -35,11 +36,11 @@
 		8FAF00FB183839DE000473DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F2183839DE000473DA /* Security.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		8FD2D92E1838434A004BCA3E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		8FB988BF1838B28900E804B6 /* ViewProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB988BE1838B28900E804B6 /* ViewProfilesViewController.m */; };
 		8FB988C11838C98D00E804B6 /* UnknownProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB988C01838C98D00E804B6 /* UnknownProfile.png */; };
 		8FB988C41838D9A700E804B6 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB988C31838D9A700E804B6 /* ChatRoomViewController.m */; };
 		8FB988C71838DB4700E804B6 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB988C61838DB4700E804B6 /* ChatCell.m */; };
+		8FD2D92E1838434A004BCA3E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
 		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
 		94BBB87B183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
@@ -63,6 +64,8 @@
 		29436D2C1838B44E009E7B4E /* facebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookButton.png; sourceTree = "<group>"; };
 		29436D2D1838B44E009E7B4E /* Start-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start-up.png"; sourceTree = "<group>"; };
 		29436D2E1838B44E009E7B4E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		8F5F6F2C183917260052DE9D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8F5F6F2D183917260052DE9D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		8FAF00AF183835EA000473DA /* LayOverTakeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayOverTakeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAF00B2183835EA000473DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FAF00B4183835EA000473DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,6 +207,8 @@
 				8FB988C31838D9A700E804B6 /* ChatRoomViewController.m */,
 				8FB988C51838DB4700E804B6 /* ChatCell.h */,
 				8FB988C61838DB4700E804B6 /* ChatCell.m */,
+				8F5F6F2C183917260052DE9D /* Reachability.h */,
+				8F5F6F2D183917260052DE9D /* Reachability.m */,
 			);
 			path = LayOverTakeTwo;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				8FB988C71838DB4700E804B6 /* ChatCell.m in Sources */,
 				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
 				29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */,
+				8F5F6F2E183917260052DE9D /* Reachability.m in Sources */,
 				8FD2D92E1838434A004BCA3E /* (null) in Sources */,
 				8FB988BF1838B28900E804B6 /* ViewProfilesViewController.m in Sources */,
 				8FB988C41838D9A700E804B6 /* ChatRoomViewController.m in Sources */,

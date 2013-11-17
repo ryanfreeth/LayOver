@@ -96,22 +96,12 @@
 
     NSLog(@"checkin pressed");
     [self performSegueWithIdentifier:@"pushToProfile" sender:self];
-    
-
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if ([segue.identifier isEqualToString:@"pushToProfiles"]) {
-        ViewProfilesViewController *vc = [segue destinationViewController];
-    }
 }
 
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
