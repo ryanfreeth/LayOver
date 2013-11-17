@@ -1,5 +1,5 @@
 //
-//  LoginScreenViewController.h
+//  EmailLoginViewController.h
 //  LayOverTakeTwo
 //
 //  Created by Ashish Agarwal on 2013-11-16.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface LoginScreenViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface EmailLoginViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @end

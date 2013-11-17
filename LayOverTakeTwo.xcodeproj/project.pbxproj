@@ -30,7 +30,8 @@
 		8FAF00FB183839DE000473DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F2183839DE000473DA /* Security.framework */; };
 		8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F3183839DE000473DA /* StoreKit.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
-		942D601E1838447400ADA5C2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942D601D1838447400ADA5C2 /* Parse.framework */; };
+		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
+		8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,9 @@
 		8FAF00F2183839DE000473DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8FAF00F3183839DE000473DA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8FAF00F4183839DE000473DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		942D601D1838447400ADA5C2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		8FAF00FE18383C8F000473DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		8FD2D92C1838434A004BCA3E /* EmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailLoginViewController.h; sourceTree = "<group>"; };
+		8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +89,7 @@
 				8FAF00F8183839DE000473DA /* libz.1.1.3.dylib in Frameworks */,
 				8FAF00F9183839DE000473DA /* MobileCoreServices.framework in Frameworks */,
 				8FAF00FA183839DE000473DA /* QuartzCore.framework in Frameworks */,
-				942D601E1838447400ADA5C2 /* Parse.framework in Frameworks */,
+				8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */,
 				8FAF00FB183839DE000473DA /* Security.framework in Frameworks */,
 				8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */,
 				8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */,
@@ -131,7 +134,7 @@
 		8FAF00B1183835EA000473DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				942D601D1838447400ADA5C2 /* Parse.framework */,
+				8FAF00FE18383C8F000473DA /* Parse.framework */,
 				8FAF00EC183839DE000473DA /* AudioToolbox.framework */,
 				8FAF00ED183839DE000473DA /* CFNetwork.framework */,
 				8FAF00EE183839DE000473DA /* CoreLocation.framework */,
@@ -155,6 +158,8 @@
 				8FAF00C1183835EA000473DA /* AppDelegate.h */,
 				8FAF00C2183835EA000473DA /* AppDelegate.m */,
 				8FAF00C4183835EA000473DA /* Main.storyboard */,
+				8FD2D92C1838434A004BCA3E /* EmailLoginViewController.h */,
+				8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */,
 				8FAF00E7183837BE000473DA /* LoginScreenViewController.h */,
 				8FAF00E8183837BE000473DA /* LoginScreenViewController.m */,
 				8FAF00CA183835EA000473DA /* Images.xcassets */,
@@ -290,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
+				8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
 			);
@@ -421,7 +427,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Apps/LayOverTakeTwo,
-					/Users/ryan/Dev/LayOver,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayOverTakeTwo/LayOverTakeTwo-Prefix.pch";
@@ -439,7 +444,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Apps/LayOverTakeTwo,
-					/Users/ryan/Dev/LayOver,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LayOverTakeTwo/LayOverTakeTwo-Prefix.pch";
