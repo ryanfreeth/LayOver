@@ -42,12 +42,9 @@
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     [testObject setObject:@"bar" forKey:@"username"];
     [testObject save];
-    
-    
 }
 
 -(IBAction)loginEmailButton:(id)sender{
-    
 
 }
 
@@ -114,7 +111,7 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     // User is signed up. so do something here ... maybe go to the next page
     
-    //[self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
+    [self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
 }
 
 // Sent to the delegate when the sign up attempt fails.
