@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29436D26183858B9009E7B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29436D25183858B9009E7B4E /* FacebookSDK.framework */; };
+		29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29436D2818387CCF009E7B4E /* ProfileViewController.m */; };
 		8FAF00B3183835EA000473DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B2183835EA000473DA /* Foundation.framework */; };
 		8FAF00B5183835EA000473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B4183835EA000473DA /* CoreGraphics.framework */; };
 		8FAF00B7183835EA000473DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B6183835EA000473DA /* UIKit.framework */; };
@@ -29,7 +30,6 @@
 		8FAF00F9183839DE000473DA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F0183839DE000473DA /* MobileCoreServices.framework */; };
 		8FAF00FA183839DE000473DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F1183839DE000473DA /* QuartzCore.framework */; };
 		8FAF00FB183839DE000473DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F2183839DE000473DA /* Security.framework */; };
-		8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F3183839DE000473DA /* StoreKit.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -52,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		29436D25183858B9009E7B4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		29436D2718387CCE009E7B4E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		29436D2818387CCF009E7B4E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		8FAF00AF183835EA000473DA /* LayOverTakeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayOverTakeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAF00B2183835EA000473DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FAF00B4183835EA000473DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,7 +80,6 @@
 		8FAF00F0183839DE000473DA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8FAF00F1183839DE000473DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8FAF00F2183839DE000473DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		8FAF00F3183839DE000473DA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8FAF00F4183839DE000473DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8FAF00FE18383C8F000473DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8FD2D92F183857D9004BCA3E /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 				8FAF00FA183839DE000473DA /* QuartzCore.framework in Frameworks */,
 				8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */,
 				8FAF00FB183839DE000473DA /* Security.framework in Frameworks */,
-				8FAF00FC183839DE000473DA /* StoreKit.framework in Frameworks */,
 				8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */,
 				8FAF00B5183835EA000473DA /* CoreGraphics.framework in Frameworks */,
 				8FAF00B7183835EA000473DA /* UIKit.framework in Frameworks */,
@@ -160,7 +160,6 @@
 				8FAF00F0183839DE000473DA /* MobileCoreServices.framework */,
 				8FAF00F1183839DE000473DA /* QuartzCore.framework */,
 				8FAF00F2183839DE000473DA /* Security.framework */,
-				8FAF00F3183839DE000473DA /* StoreKit.framework */,
 				8FAF00F4183839DE000473DA /* SystemConfiguration.framework */,
 				8FAF00B2183835EA000473DA /* Foundation.framework */,
 				8FAF00B4183835EA000473DA /* CoreGraphics.framework */,
@@ -176,6 +175,8 @@
 				8FAF00C1183835EA000473DA /* AppDelegate.h */,
 				8FAF00C2183835EA000473DA /* AppDelegate.m */,
 				8FAF00C4183835EA000473DA /* Main.storyboard */,
+				29436D2718387CCE009E7B4E /* ProfileViewController.h */,
+				29436D2818387CCF009E7B4E /* ProfileViewController.m */,
 				8FD2D92F183857D9004BCA3E /* CheckInViewController.h */,
 				8FD2D930183857D9004BCA3E /* CheckInViewController.m */,
 				8FAF00E7183837BE000473DA /* LoginScreenViewController.h */,
@@ -262,6 +263,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Ashish Agarwal";
 				TargetAttributes = {
+					8FAF00AE183835EA000473DA = {
+						DevelopmentTeam = B2T72YBCCD;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
 					8FAF00CF183835EA000473DA = {
 						TestTargetID = 8FAF00AE183835EA000473DA;
 					};
@@ -314,6 +323,8 @@
 			files = (
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
 				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
+				29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */,
+				8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
 			);

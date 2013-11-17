@@ -19,6 +19,7 @@
 
 -(IBAction)loginWithFacebookPressed : (id)sender;
 -(IBAction)registerEmailButton:(id)sender;
+- (IBAction)logoutClicked:(id)sender;
 
 @end
 
@@ -69,11 +70,15 @@
             NSLog(@"User with facebook signed up and logged in!");
             [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
             NSLog(@"%@", user.username);
+            
+            [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
            // [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         } else {
             NSLog(@"User with facebook logged in!");
             NSLog(@"%@", user.username);
             [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
+            
+            [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
           //  [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         }
     }];
@@ -99,6 +104,10 @@
         // user is already checked in at this point
         [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
     }
+}
+
+- (IBAction)logoutClicked:(id)sender {
+    [PFUser logOut];
 }
 
 -(BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password{
@@ -154,6 +163,7 @@
     [self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
     
     //push to the next screen
+    [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
 }
 
 // Sent to the delegate when the sign up attempt fails.
