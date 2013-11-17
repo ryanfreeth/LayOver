@@ -81,15 +81,20 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gK-2r-IYX">
-                                <rect key="frame" x="130" y="518" width="61" height="30"/>
+                            
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpb-RK-nz7">
+                                <rect key="frame" x="0.0" y="65" width="320" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-WW-aaj">
+                                <rect key="frame" x="0.0" y="511" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="checkInPressed" destination="9iF-ib-BoF" eventType="touchUpInside" id="0yM-Lj-ti4"/>
-                                    <segue destination="6Yz-Eh-N9G" kind="push" identifier="pushToProfile" id="zYQ-ds-nfT"/>
+
+                                    <action selector="checkInPressed:" destination="9iF-ib-BoF" eventType="touchUpInside" id="JXc-Hw-v3O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,14 +102,124 @@
                     </view>
                     <navigationItem key="navigationItem" id="Bo4-JT-fcr"/>
                     <connections>
-                        <outlet property="airportsTable" destination="yTn-qO-ZQV" id="fty-bv-R0x"/>
-                        <outlet property="checkinButton" destination="0gK-2r-IYX" id="GOO-C2-gNM"/>
-                        <outlet property="mapView" destination="tUF-CZ-56q" id="8KL-4o-YMr"/>
+
+                        <outlet property="airportsTable" destination="K2z-2l-U6B" id="Ly6-qF-HUo"/>
+                        <outlet property="checkinButton" destination="f3Q-WW-aaj" id="Mhq-KR-kE6"/>
+                        <outlet property="mapView" destination="xpb-RK-nz7" id="OCo-XA-4Iv"/>
+                        <segue destination="Qtv-Rj-daH" kind="push" identifier="pushToProfiles" id="vdd-Cb-f3a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GX-R5-ejV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="-18"/>
+            <point key="canvasLocation" x="1447" y="-21"/>
+        </scene>
+        <!--View Profiles View Controller-->
+        <scene sceneID="8bA-vb-u8n">
+            <objects>
+                <viewController id="Qtv-Rj-daH" customClass="ViewProfilesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XZw-2d-Vgn"/>
+                        <viewControllerLayoutGuide type="bottom" id="HE3-eB-S5G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="snW-8S-xaC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="deQ-xT-hBh">
+                                <rect key="frame" x="0.0" y="60" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qtv-Rj-daH" id="6CB-F8-HYE"/>
+                                    <outlet property="delegate" destination="Qtv-Rj-daH" id="atp-Bz-Uh0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ead-Tv-usf"/>
+                    <connections>
+                        <outlet property="usersTable" destination="deQ-xT-hBh" id="xwd-1g-Quc"/>
+                        <segue destination="5h2-7W-WRe" kind="push" identifier="beginChat" id="Upk-Ul-dPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CJ-La-DOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="-21"/>
+        </scene>
+        <!--Chat Room View Controller-->
+        <scene sceneID="5hP-1a-NIB">
+            <objects>
+                <viewController id="5h2-7W-WRe" customClass="ChatRoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sni-qi-hvk"/>
+                        <viewControllerLayoutGuide type="bottom" id="4SX-L7-KtO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DGX-OJ-icb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hg5-bJ-0IB">
+                                <rect key="frame" x="0.0" y="61" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textField key="tableFooterView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VId-De-0fT">
+                                    <rect key="frame" x="0.0" y="142" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCellIdentifier" rowHeight="56" id="QWu-5R-zk6" customClass="ChatCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QWu-5R-zk6" id="h5R-xm-GRy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpk-26-b5u">
+                                                    <rect key="frame" x="8" y="5" width="84" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aey-A1-NtP">
+                                                    <rect key="frame" x="8" y="25" width="40" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXG-HZ-Rm0">
+                                                    <rect key="frame" x="100" y="14" width="220" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textString" destination="jXG-HZ-Rm0" id="BXD-Jt-fIp"/>
+                                            <outlet property="timeLabel" destination="Aey-A1-NtP" id="LeE-d1-P7A"/>
+                                            <outlet property="userLabel" destination="jpk-26-b5u" id="kDa-qs-kKj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5h2-7W-WRe" id="uZD-fP-8fA"/>
+                                    <outlet property="delegate" destination="5h2-7W-WRe" id="fdx-Ql-ae5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ObN-Mr-CoO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRo-P8-1rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320" y="-21"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="0EF-8W-dwz">
@@ -221,7 +336,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcI-gC-sYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="-21"/>
+
+            <point key="canvasLocation" x="1019" y="-21"/>
+
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

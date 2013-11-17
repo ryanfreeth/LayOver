@@ -36,6 +36,10 @@
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8FD2D92E1838434A004BCA3E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		8FB988BF1838B28900E804B6 /* ViewProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB988BE1838B28900E804B6 /* ViewProfilesViewController.m */; };
+		8FB988C11838C98D00E804B6 /* UnknownProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB988C01838C98D00E804B6 /* UnknownProfile.png */; };
+		8FB988C41838D9A700E804B6 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB988C31838D9A700E804B6 /* ChatRoomViewController.m */; };
+		8FB988C71838DB4700E804B6 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB988C61838DB4700E804B6 /* ChatCell.m */; };
 		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
 		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
 		94BBB87B183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
@@ -86,6 +90,13 @@
 		8FAF00F2183839DE000473DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8FAF00F4183839DE000473DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8FAF00FE18383C8F000473DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		8FB988BD1838B28900E804B6 /* ViewProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewProfilesViewController.h; sourceTree = "<group>"; };
+		8FB988BE1838B28900E804B6 /* ViewProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewProfilesViewController.m; sourceTree = "<group>"; };
+		8FB988C01838C98D00E804B6 /* UnknownProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownProfile.png; sourceTree = "<group>"; };
+		8FB988C21838D9A700E804B6 /* ChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomViewController.h; sourceTree = "<group>"; };
+		8FB988C31838D9A700E804B6 /* ChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomViewController.m; sourceTree = "<group>"; };
+		8FB988C51838DB4700E804B6 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		8FB988C61838DB4700E804B6 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		8FD2D92F183857D9004BCA3E /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		8FD2D930183857D9004BCA3E /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		8FD2D93218387015004BCA3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +198,12 @@
 				8FAF00E8183837BE000473DA /* LoginScreenViewController.m */,
 				8FAF00CA183835EA000473DA /* Images.xcassets */,
 				8FAF00B9183835EA000473DA /* Supporting Files */,
+				8FB988BD1838B28900E804B6 /* ViewProfilesViewController.h */,
+				8FB988BE1838B28900E804B6 /* ViewProfilesViewController.m */,
+				8FB988C21838D9A700E804B6 /* ChatRoomViewController.h */,
+				8FB988C31838D9A700E804B6 /* ChatRoomViewController.m */,
+				8FB988C51838DB4700E804B6 /* ChatCell.h */,
+				8FB988C61838DB4700E804B6 /* ChatCell.m */,
 			);
 			path = LayOverTakeTwo;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 				29436D2C1838B44E009E7B4E /* facebookButton.png */,
 				29436D2D1838B44E009E7B4E /* Start-up.png */,
 				29436D2E1838B44E009E7B4E /* logo.png */,
+				8FB988C01838C98D00E804B6 /* UnknownProfile.png */,
 				8FAF00BA183835EA000473DA /* LayOverTakeTwo-Info.plist */,
 				8FAF00BB183835EA000473DA /* InfoPlist.strings */,
 				8FAF00BE183835EA000473DA /* main.m */,
@@ -311,6 +329,7 @@
 				8FAF00BD183835EA000473DA /* InfoPlist.strings in Resources */,
 				29436D311838B44E009E7B4E /* logo.png in Resources */,
 				29436D301838B44E009E7B4E /* Start-up.png in Resources */,
+				8FB988C11838C98D00E804B6 /* UnknownProfile.png in Resources */,
 				8FAF00C6183835EA000473DA /* Main.storyboard in Resources */,
 				29436D2F1838B44E009E7B4E /* facebookButton.png in Resources */,
 			);
@@ -332,9 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
+				8FB988C71838DB4700E804B6 /* ChatCell.m in Sources */,
 				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
 				29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */,
 				8FD2D92E1838434A004BCA3E /* (null) in Sources */,
+				8FB988BF1838B28900E804B6 /* ViewProfilesViewController.m in Sources */,
+				8FB988C41838D9A700E804B6 /* ChatRoomViewController.m in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
 			);

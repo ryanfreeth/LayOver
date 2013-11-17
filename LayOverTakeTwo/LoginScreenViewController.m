@@ -99,6 +99,8 @@
         [loginViewController setSignUpController:signUpViewController];
         
         [self presentViewController:loginViewController animated:YES completion:NULL];
+        [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
+        
     }
     else {
         // user is already checked in at this point

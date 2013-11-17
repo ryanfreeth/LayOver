@@ -7,17 +7,16 @@
 //
 
 #import "CheckInViewController.h"
+#import "ViewProfilesViewController.h"
 #import "Parse/Parse.h"
 
 @interface CheckInViewController ()
-@property (nonatomic, strong)NSMutableArray *airports;
+@property (nonatomic, strong)NSArray *airports;
 @property (strong, nonatomic) IBOutlet UITableView *airportsTable;
 //@property (strong, nonatomic) IBOutlet UIButton *checkinButton;
 @property (nonatomic) NSInteger selectedRow;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIButton *checkinButton;
-
-//
 
 @end
 
@@ -35,14 +34,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    /*self.checkinButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.checkinButton.frame = CGRectMake(0, 504, 320, 64);
-    [self.checkinButton addTarget:self action:@selector(checkInPressed) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.checkinButton];*/
 
     // get from parse
-    self.airports = [[NSMutableArray alloc] initWithObjects: @"BLI - Bellingham Intl.", @"SEA - Seattle-Tacoma Intl.", @" YVR - Vancouver Intl.", @"YXX - Abbottsford Intl.", nil];
+    PFQuery *query = [PFQuery queryWithClassName:@"airports"];
+    self.airports = [query findObjects];
+    
+    //self.airports = [[NSMutableArray alloc] initWithObjects: @"BLI - Bellingham Intl.", @"SEA - Seattle-Tacoma Intl.", @" YVR - Vancouver Intl.", @"YXX - Abbottsford Intl.", nil];
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 49.276667;
@@ -50,7 +47,6 @@
     
     // 2
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 100, 194);
-    
     // 3
     [self.mapView setRegion:viewRegion animated:YES];
     
@@ -78,7 +74,9 @@
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
     
-    cell.textLabel.text = [self.airports objectAtIndex:indexPath.row];
+    PFObject *airport = [self.airports objectAtIndex:indexPath.row];
+    //airport.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@-%@", [airport objectForKey:@"code"], [airport objectForKey:@"name"] ] ;
     
     return cell;
 }
@@ -88,17 +86,25 @@
     [tableView reloadData];
 }
 
--(IBAction)checkInPressed{
-    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"userID"];
+-(IBAction)checkInPressed:(id)sender{
     
     PFObject *testObject = [PFObject objectWithClassName:@"checkins"];
-    //[testObject setObject:username forKey:@"User"];
     [testObject setObject:[PFUser currentUser] forKey:@"User"];
+    [testObject setObject: [self.airports objectAtIndex:self.selectedRow] forKey:@"airport"];
     //[testObject setObject:[self.airports objectAtIndex:self.selectedRow] forKey:@"airport"];
     [testObject save];
+
     NSLog(@"checkin pressed");
     [self performSegueWithIdentifier:@"pushToProfile" sender:self];
     
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"pushToProfiles"]) {
+        ViewProfilesViewController *vc = [segue destinationViewController];
+    }
 }
 
 

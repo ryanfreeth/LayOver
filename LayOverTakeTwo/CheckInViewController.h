@@ -11,6 +11,6 @@
 
 @interface CheckInViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
--(IBAction)checkInPressed;
+-(IBAction)checkInPressed:(id)sender;
 
 @end
