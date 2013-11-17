@@ -11,6 +11,9 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <CFNetwork/CFNetwork.h>
 #import <CoreLocation/CoreLocation.h>
+#import "CheckInViewController.h"
+#import "ParseLoginViewController.h"
+#import "ParseSignupViewController.h"
 
 
 @interface LoginScreenViewController ()
@@ -19,7 +22,8 @@
 
 -(IBAction)loginWithFacebookPressed : (id)sender;
 -(IBAction)registerEmailButton:(id)sender;
-- (IBAction)logoutClicked:(id)sender;
+//- (IBAction)logoutClicked:(id)sender;
+- (IBAction)singinButtonClicked:(UIButton *)sender;
 
 @end
 
@@ -45,13 +49,15 @@
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     [testObject setObject:@"bar" forKey:@"username"];
     [testObject save];
+    
+    if ([PFUser currentUser]) [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
 }
-
 
 -(IBAction)loginWithFacebookPressed:(id)sender{
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
     
+
     // Login PFUser using facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
         //[_activityIndicator stopAnimating]; // Hide loading indicator
@@ -71,6 +77,8 @@
             [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
             NSLog(@"%@", user.username);
             
+            
+            //[self.navigationController pushViewController:[[CheckInViewController alloc] init] animated:YES];
             [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
            // [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         } else {
@@ -78,7 +86,8 @@
             NSLog(@"%@", user.username);
             [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
             
-            [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
+           //[self.navigationController pushViewController:[[CheckInViewController alloc] init] animated:YES];
+           [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
           //  [self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         }
     }];
@@ -86,31 +95,36 @@
     //[_activityIndicator startAnimating]; // Show loading indicator until login is finished
 }
 
--(IBAction)registerEmailButton:(id)sender{
+- (IBAction)logoutClicked:(id)sender {
+    [PFUser logOut];
+}
+
+- (IBAction)singinButtonClicked:(UIButton *)sender {
+    
     if (![PFUser currentUser]) {
-        //login view controller
-        PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
-        [loginViewController setDelegate:self];
+        // Customize the Log In View Controller
+        ParseLoginViewController *logInViewController = [[ParseLoginViewController alloc] init];
+        logInViewController.delegate = self;
+        logInViewController.facebookPermissions = @[@"friends_about_me"];
+        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
         
-        //create sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self];
+        // Customize the Sign Up View Controller
+        ParseSignupViewController *signUpViewController = [[ParseSignupViewController alloc] init];
+        signUpViewController.delegate = self;
+        signUpViewController.fields = PFSignUpFieldsDefault;
+        logInViewController.signUpController = signUpViewController;
         
-        [loginViewController setSignUpController:signUpViewController];
-        
-        [self presentViewController:loginViewController animated:YES completion:NULL];
-        [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
-        
+        // Present Log In View Controller
+        [self presentViewController:logInViewController animated:YES completion:NULL];
     }
     else {
         // user is already checked in at this point
         [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
+        //[self.navigationController pushViewController:[[CheckInViewController alloc] init] animated:YES];
     }
 }
 
-- (IBAction)logoutClicked:(id)sender {
-    [PFUser logOut];
-}
+#pragma mark - PFLogInViewControllerDelegate
 
 -(BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password{
     
@@ -123,9 +137,10 @@
    
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        [self dismissModalViewControllerAnimated:YES];
+        //[self dismissViewControllerAnimated:NO completion:NULL];
         
-        [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
+        //[self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
+        //[self.navigationController pushViewController:[[CheckInViewController alloc] init] animated:YES];
         return YES;
     }
     
@@ -133,6 +148,24 @@
     
     return NO;
 }
+
+// Sent to the delegate when a PFUser is logged in.
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:NO completion:NULL];
+    [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
+}
+
+// Sent to the delegate when the log in attempt fails.
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    NSLog(@"Failed to log in...");
+}
+
+// Sent to the delegate when the log in screen is dismissed.
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    NSLog(@"User dismissed the logInViewController");
+}
+
+#pragma mark - PFSignUpViewControllerDelegate
 
 -(BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info{
     BOOL informationComplete = YES;
@@ -162,7 +195,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:user.username forKey:@"userID"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
+    [self dismissViewControllerAnimated:NO completion:NULL];; // Dismiss the PFSignUpViewController
     
     //push to the next screen
     [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];

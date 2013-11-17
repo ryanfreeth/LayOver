@@ -9,6 +9,7 @@
 #import "CheckInViewController.h"
 #import "ViewProfilesViewController.h"
 #import "Parse/Parse.h"
+#import "ProfileViewController.h"
 
 @interface CheckInViewController ()
 @property (nonatomic, strong)NSArray *airports;
@@ -34,6 +35,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    /*self.checkinButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.checkinButton.frame = CGRectMake(0, 504, 320, 64);
+    [self.checkinButton addTarget:self action:@selector(checkInPressed) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:self.checkinButton];*/
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:21.0 green:76.0 blue:133.0 alpha:1.0];
 
     // get from parse
     PFQuery *query = [PFQuery queryWithClassName:@"airports"];
@@ -96,6 +104,10 @@
 
     NSLog(@"checkin pressed");
     [self performSegueWithIdentifier:@"pushToProfile" sender:self];
+    
+    //[self.navigationController pushViewController:[[ProfileViewController alloc] init] animated:YES];
+    //[self performSegueWithIdentifier:@"pushToProfile" sender:self];
+
 }
 
 

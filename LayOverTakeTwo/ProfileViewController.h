@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *backImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *profileBackgroundView;
 
 @property (nonatomic, strong) NSMutableData *imageData;
 

@@ -29,8 +29,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    int randomNumber = arc4random() % 8 + 1; //int for random image
+    NSString *imageName = [[NSString alloc] initWithFormat:@"profileBG%i.png", randomNumber];
+    self.profileBackgroundView.image = [UIImage imageNamed: imageName];
+    
+    // Add a nice corner radius to the image
+    self.profileImageView.layer.cornerRadius = 75.0f;
+    self.profileImageView.layer.masksToBounds = YES;
+    self.backImageView.layer.cornerRadius = 75.0f;
+    self.backImageView.layer.masksToBounds = YES;
+    
+    self.profileImageView.alpha = 0.0;
+    
     // Add logout navigation bar button
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(menuButtonTouchHandler:)];
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"MENU" style:UIBarButtonItemStyleBordered target:self action:@selector(menuButtonTouchHandler:)];
     self.navigationItem.rightBarButtonItem = logoutButton;
     
     // If the user is already logged in, display any previously cached values before we get the latest from Facebook.
@@ -122,12 +134,12 @@
     float minSize;
     if (image.size.height <= image.size.width) minSize = image.size.height; else minSize = image.size.width;
     image = [self imageByCropping: [UIImage imageWithData:self.imageData] toSize: CGSizeMake(minSize, minSize)];
-    
-    // Add a nice corner radius to the image
-    self.profileImageView.layer.cornerRadius = 75.0f;
-    self.profileImageView.layer.masksToBounds = YES;
 
     self.profileImageView.image = image; //[UIImage imageWithData:self.imageData];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.profileImageView.alpha = 1.0;
+    }];
+    
 }
 
 #pragma mark - Helper methods
@@ -183,7 +195,9 @@
     [PFUser logOut];
     
     // Return to login view controller
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    
+    //[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
