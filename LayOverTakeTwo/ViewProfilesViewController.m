@@ -8,6 +8,7 @@
 
 #import "ViewProfilesViewController.h"
 #import "Parse/Parse.h"
+#import "ProfileViewController.h"
 
 @interface ViewProfilesViewController ()
 @property(nonatomic, strong) NSArray *userList;
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
 	
-    PFQuery *query = [PFUser query];
+    //PFQuery *query = [PFUser query];
     //self.userList = [query findObjects];
     
     self.userList = [PFCloud callFunction:@"matches" withParameters:@{}];
@@ -81,7 +82,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"beginChat" sender:self];
+    
+    //ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
+    //self.navigationController
+    [self performSegueWithIdentifier:@"pushProfile" sender:self];
 }
 
 - (void)didReceiveMemoryWarning

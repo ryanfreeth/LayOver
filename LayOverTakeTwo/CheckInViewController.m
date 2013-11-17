@@ -103,7 +103,7 @@
     [testObject save];
 
     NSLog(@"checkin pressed");
-    [self performSegueWithIdentifier:@"pushToProfile" sender:self];
+    [self performSegueWithIdentifier:@"pushToProfiles" sender:self];
     
     //[self.navigationController pushViewController:[[ProfileViewController alloc] init] animated:YES];
     //[self performSegueWithIdentifier:@"pushToProfile" sender:self];
