@@ -17,6 +17,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *backImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *profileBackgroundView;
+@property (strong, nonatomic) NSString *imageName;
+@property (strong, nonatomic) PFUser *userObject;
+
 
 @property (nonatomic, strong) NSMutableData *imageData;
 

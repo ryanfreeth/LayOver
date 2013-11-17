@@ -14,6 +14,8 @@
 @property(nonatomic, strong) NSArray *userList;
 @property (strong, nonatomic) IBOutlet UITableView *usersTable;
 
+@property ( nonatomic) NSInteger selectedRowIndex;
+
 @end
 
 @implementation ViewProfilesViewController
@@ -81,10 +83,18 @@
     return cell;
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"pushProfile"]) {
+        ProfileViewController *vc = [segue destinationViewController];
+        [vc setUserObject:[self.userList objectAtIndex:self.selectedRowIndex]];
+    }
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
     //self.navigationController
+    self.selectedRowIndex = indexPath.row;
     [self performSegueWithIdentifier:@"pushProfile" sender:self];
 }
 

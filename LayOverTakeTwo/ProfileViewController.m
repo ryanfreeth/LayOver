@@ -42,8 +42,8 @@
     self.profileImageView.alpha = 0.0;
     
     // Add logout navigation bar button
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"MENU" style:UIBarButtonItemStyleBordered target:self action:@selector(menuButtonTouchHandler:)];
-    self.navigationItem.rightBarButtonItem = logoutButton;
+    /*UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"MENU" style:UIBarButtonItemStyleBordered target:self action:@selector(menuButtonTouchHandler:)];
+    self.navigationItem.rightBarButtonItem = logoutButton;*/
     
     // If the user is already logged in, display any previously cached values before we get the latest from Facebook.
     if ([PFUser currentUser]) {
