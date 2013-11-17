@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		29436D26183858B9009E7B4E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29436D25183858B9009E7B4E /* FacebookSDK.framework */; };
 		29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29436D2818387CCF009E7B4E /* ProfileViewController.m */; };
+		29436D2F1838B44E009E7B4E /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2C1838B44E009E7B4E /* facebookButton.png */; };
+		29436D301838B44E009E7B4E /* Start-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2D1838B44E009E7B4E /* Start-up.png */; };
+		29436D311838B44E009E7B4E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 29436D2E1838B44E009E7B4E /* logo.png */; };
 		8FAF00B3183835EA000473DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B2183835EA000473DA /* Foundation.framework */; };
 		8FAF00B5183835EA000473DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B4183835EA000473DA /* CoreGraphics.framework */; };
 		8FAF00B7183835EA000473DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00B6183835EA000473DA /* UIKit.framework */; };
@@ -31,9 +34,8 @@
 		8FAF00FA183839DE000473DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F1183839DE000473DA /* QuartzCore.framework */; };
 		8FAF00FB183839DE000473DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F2183839DE000473DA /* Security.framework */; };
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
-		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */; };
+		8FD2D92E1838434A004BCA3E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
 		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
 		94BBB87B183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
@@ -54,6 +56,9 @@
 		29436D25183858B9009E7B4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		29436D2718387CCE009E7B4E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		29436D2818387CCF009E7B4E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		29436D2C1838B44E009E7B4E /* facebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookButton.png; sourceTree = "<group>"; };
+		29436D2D1838B44E009E7B4E /* Start-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start-up.png"; sourceTree = "<group>"; };
+		29436D2E1838B44E009E7B4E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8FAF00AF183835EA000473DA /* LayOverTakeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayOverTakeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAF00B2183835EA000473DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FAF00B4183835EA000473DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,7 +69,6 @@
 		8FAF00C0183835EA000473DA /* LayOverTakeTwo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LayOverTakeTwo-Prefix.pch"; sourceTree = "<group>"; };
 		8FAF00C1183835EA000473DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FAF00C2183835EA000473DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8FAF00C5183835EA000473DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FAF00CA183835EA000473DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8FAF00D0183835EA000473DA /* LayOverTakeTwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayOverTakeTwoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAF00D1183835EA000473DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -190,6 +194,9 @@
 		8FAF00B9183835EA000473DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				29436D2C1838B44E009E7B4E /* facebookButton.png */,
+				29436D2D1838B44E009E7B4E /* Start-up.png */,
+				29436D2E1838B44E009E7B4E /* logo.png */,
 				8FAF00BA183835EA000473DA /* LayOverTakeTwo-Info.plist */,
 				8FAF00BB183835EA000473DA /* InfoPlist.strings */,
 				8FAF00BE183835EA000473DA /* main.m */,
@@ -302,7 +309,10 @@
 			files = (
 				8FAF00CB183835EA000473DA /* Images.xcassets in Resources */,
 				8FAF00BD183835EA000473DA /* InfoPlist.strings in Resources */,
+				29436D311838B44E009E7B4E /* logo.png in Resources */,
+				29436D301838B44E009E7B4E /* Start-up.png in Resources */,
 				8FAF00C6183835EA000473DA /* Main.storyboard in Resources */,
+				29436D2F1838B44E009E7B4E /* facebookButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +334,7 @@
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
 				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
 				29436D2918387CCF009E7B4E /* ProfileViewController.m in Sources */,
-				8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */,
+				8FD2D92E1838434A004BCA3E /* (null) in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
 			);
@@ -360,7 +370,6 @@
 		8FAF00C4183835EA000473DA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8FAF00C5183835EA000473DA /* Base */,
 				8FD2D93218387015004BCA3E /* en */,
 			);
 			name = Main.storyboard;
@@ -453,7 +462,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					.,
 					/Users/ryan/Dev/LayOver,
@@ -470,7 +478,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					.,
 					/Users/ryan/Dev/LayOver,

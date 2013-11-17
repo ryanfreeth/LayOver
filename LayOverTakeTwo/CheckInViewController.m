@@ -97,6 +97,7 @@
     //[testObject setObject:[self.airports objectAtIndex:self.selectedRow] forKey:@"airport"];
     [testObject save];
     NSLog(@"checkin pressed");
+    [self performSegueWithIdentifier:@"pushToProfile" sender:self];
     
 }
 

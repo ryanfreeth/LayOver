@@ -123,6 +123,10 @@
     if (image.size.height <= image.size.width) minSize = image.size.height; else minSize = image.size.width;
     image = [self imageByCropping: [UIImage imageWithData:self.imageData] toSize: CGSizeMake(minSize, minSize)];
     
+    // Add a nice corner radius to the image
+    self.profileImageView.layer.cornerRadius = 75.0f;
+    self.profileImageView.layer.masksToBounds = YES;
+
     self.profileImageView.image = image; //[UIImage imageWithData:self.imageData];
 }
 
