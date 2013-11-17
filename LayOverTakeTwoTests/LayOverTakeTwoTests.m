@@ -46,13 +46,17 @@
     PFUser *currentUser = [PFUser currentUser];
     NSString *name = currentUser.username;
     NSLog(name);
-    XCTAssertEqual(currentUser.username, name, @"User is actually ryan");
+    XCTAssert(currentUser.username == name, @"User is actually ryan");
 }
 
-- (void)testCheckin
+- (void)testAirportsLoad
 {
     PFQuery *query = [PFQuery queryWithClassName:@"airports"];
-    XCTAssertNotNil(query, @"null");
+    NSArray* airports = [query findObjects];
+    XCTAssert(airports.count > 0, @"No airports loaded");
+    
+    PFObject* van = [airports objectAtIndex:0];
+    XCTAssert(van.name == @"Vancouver", @"Not Vancouver");
 }
 
 @end
