@@ -165,7 +165,7 @@
     // Set the name in the view label
     if ([self.userObject objectForKey:@"profile"][@"name"]) {
         self.userNameLabel.text = [self.userObject objectForKey:@"profile"][@"name"];
-    }
+    } else self.userNameLabel.text = [self.userObject objectForKey:@"username"];
     
     // Download the user's facebook profile picture
     self.imageData = [[NSMutableData alloc] init]; // the data will be loaded in here

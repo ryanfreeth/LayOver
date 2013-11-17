@@ -58,17 +58,20 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
+    PFUser *userObject = [self.userList objectAtIndex:indexPath.row];
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10 , 80, 80)];
     [imageView setImage:[UIImage imageNamed:@"UnknownProfile.png"]];
     [cell.contentView addSubview:imageView];
     
-    PFUser *userObject = [self.userList objectAtIndex:indexPath.row];
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 220, 20)];
     
     NSString *string;
-    if ([userObject objectForKey:@"name"]) {
+    // Set the name in the view label
+    if ([userObject objectForKey:@"profile"][@"name"]) {
         //use facebook
-        string = [NSString stringWithFormat:@"%@", [userObject objectForKey:@"name"]];
+        string = [NSString stringWithFormat:@"%@", [userObject objectForKey:@"profile"][@"name"]];
     }
     else {
         string = [NSString stringWithFormat:@"%@", [userObject objectForKey:@"username"]];
@@ -91,6 +94,7 @@
     
     return cell;
 }
+
 
 
 
