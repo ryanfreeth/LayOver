@@ -35,6 +35,10 @@
     return self;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,7 +59,6 @@
 
 -(IBAction)registerEmailButton:(id)sender{
     if (![PFUser currentUser]) {
-        
         //login view controller
         PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
         [loginViewController setDelegate:self];
@@ -67,7 +70,10 @@
         [loginViewController setSignUpController:signUpViewController];
         
         [self presentViewController:loginViewController animated:YES completion:NULL];
-        
+    }
+    else {
+        // user is already checked in at this point
+        [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
     }
 }
 
@@ -75,7 +81,14 @@
     
     if (username && password && username.length!=0 && password.length!=0) {
         
+        NSLog(@"signed in ");
         //save the username in the NSUserdefaults
+        
+        [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"userID"];
+        
+        [self dismissModalViewControllerAnimated:YES];
+        
+        [self performSegueWithIdentifier:@"pushToCheckIn" sender:self];
         return YES;
     }
     
@@ -109,9 +122,9 @@
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    // User is signed up. so do something here ... maybe go to the next page
-    
     [self dismissModalViewControllerAnimated:YES]; // Dismiss the PFSignUpViewController
+    
+    //push to the next screen
 }
 
 // Sent to the delegate when the sign up attempt fails.

@@ -32,6 +32,7 @@
 		8FAF00FD183839DE000473DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00F4183839DE000473DA /* SystemConfiguration.framework */; };
 		8FAF00FF18383C8F000473DA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAF00FE18383C8F000473DA /* Parse.framework */; };
 		8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */; };
+		8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2D930183857D9004BCA3E /* CheckInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		8FAF00FE18383C8F000473DA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8FD2D92C1838434A004BCA3E /* EmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailLoginViewController.h; sourceTree = "<group>"; };
 		8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailLoginViewController.m; sourceTree = "<group>"; };
+		8FD2D92F183857D9004BCA3E /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
+		8FD2D930183857D9004BCA3E /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				8FAF00C1183835EA000473DA /* AppDelegate.h */,
 				8FAF00C2183835EA000473DA /* AppDelegate.m */,
 				8FAF00C4183835EA000473DA /* Main.storyboard */,
+				8FD2D92F183857D9004BCA3E /* CheckInViewController.h */,
+				8FD2D930183857D9004BCA3E /* CheckInViewController.m */,
 				8FD2D92C1838434A004BCA3E /* EmailLoginViewController.h */,
 				8FD2D92D1838434A004BCA3E /* EmailLoginViewController.m */,
 				8FAF00E7183837BE000473DA /* LoginScreenViewController.h */,
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FAF00C3183835EA000473DA /* AppDelegate.m in Sources */,
+				8FD2D931183857D9004BCA3E /* CheckInViewController.m in Sources */,
 				8FD2D92E1838434A004BCA3E /* EmailLoginViewController.m in Sources */,
 				8FAF00BF183835EA000473DA /* main.m in Sources */,
 				8FAF00E9183837BE000473DA /* LoginScreenViewController.m in Sources */,
