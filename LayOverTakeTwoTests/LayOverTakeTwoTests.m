@@ -22,6 +22,7 @@
     [Parse setApplicationId:@"1KJpfgJ67iKJDVktLPk4cFvwN1njyk0PVuLhAd5e"
                   clientKey:@"oFnYB7UItPQSN6dhGPhT1Voe2HykFMaLRs0v35IH"];
     
+    
     }
 
 - (void)tearDown
@@ -56,7 +57,22 @@
     XCTAssert(airports.count > 0, @"No airports loaded");
     
     PFObject* van = [airports objectAtIndex:0];
-    XCTAssert(van.name == @"Vancouver", @"Not Vancouver");
+//    XCTAssert(van.name == @"Vancouver", @"Not Vancouver");
+}
+
+- (void)testMatches
+{
+//    PFUser* user = [PFUser logInWithUsername:@"ryan" password:@"layover"];
+    NSString* match = [PFCloud callFunction:@"matches" withParameters:@{}];
+    NSLog(@"%@", match);
+    XCTAssertNotNil(match, @"match is nil");
+}
+
+- (void)testLatestCheckin
+{
+    NSObject* match = [PFCloud callFunction:@"latestCheckin" withParameters:@{}];
+    NSLog(@"%@", match);
+    XCTAssertNotNil(match, @"match is nil");
 }
 
 @end
