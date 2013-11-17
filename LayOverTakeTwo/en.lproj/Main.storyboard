@@ -149,13 +149,12 @@
                     <navigationItem key="navigationItem" id="Ead-Tv-usf"/>
                     <connections>
                         <outlet property="usersTable" destination="deQ-xT-hBh" id="xwd-1g-Quc"/>
-
                         <segue destination="6Yz-Eh-N9G" kind="push" identifier="pushProfile" id="Ix3-tb-vDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CJ-La-DOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1248" y="257"/>
+            <point key="canvasLocation" x="1204" y="651"/>
         </scene>
         <!--Chat Room View Controller-->
         <scene sceneID="5hP-1a-NIB">
@@ -236,8 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRo-P8-1rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="1990" y="901"/>
+            <point key="canvasLocation" x="2284" y="825"/>
         </scene>
         <!--Meetup View Controller-->
         <scene sceneID="5RR-qv-6zT">
@@ -271,8 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLi-zw-ecm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="1656" y="195"/>
+            <point key="canvasLocation" x="1982" y="58"/>
         </scene>
         <!--Meetup Detail View Controller-->
         <scene sceneID="MCP-ev-FR3">
@@ -287,17 +284,41 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-yG-Bfs">
-                                <rect key="frame" x="0.0" y="65" width="320" height="286"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="250"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vendor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-lO-ppf">
+                                <rect key="frame" x="42" y="413" width="237" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vendor Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-zG-w4H">
+                                <rect key="frame" x="42" y="449" width="237" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOH-Ou-S69">
+                                <rect key="frame" x="85" y="240" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.082352941176470587" green="0.29803921568627451" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="CPo-Cj-bNG"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="MNH-yG-Bfs" id="QO0-MJ-fWe"/>
+                        <outlet property="profileImageView" destination="kOH-Ou-S69" id="Adl-on-OnX"/>
+                        <outlet property="vendorLocationLabel" destination="dfs-zG-w4H" id="RnR-vo-KOL"/>
+                        <outlet property="vendorNameLabel" destination="hoH-lO-ppf" id="HHT-7p-6np"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0e-fb-Wa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075" y="200"/>
+            <point key="canvasLocation" x="2417" y="64"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="0EF-8W-dwz">
@@ -384,6 +405,9 @@
                                 <state key="normal" image="handshake.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="meetUpButtonPressed:" destination="6Yz-Eh-N9G" eventType="touchUpInside" id="xdI-k0-MlR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.29803921568627451" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,14 +415,21 @@
                     <navigationItem key="navigationItem" id="KhL-nc-Q37"/>
                     <connections>
                         <outlet property="backImageView" destination="IdG-mn-Yxw" id="M6M-Sv-dnP"/>
+
+                        <outlet property="logoutButton" destination="3i5-nh-XbI" id="m0N-bn-C6O"/>
+                        <outlet property="meetUpButton" destination="6Q6-KR-LNu" id="YV0-PO-rPw"/>
+
                         <outlet property="profileBackgroundView" destination="jfF-4l-9M2" id="466-m2-p7C"/>
                         <outlet property="profileImageView" destination="25e-JO-78R" id="uBj-2s-Euo"/>
                         <outlet property="userNameLabel" destination="IkC-p9-vPj" id="oPm-kw-Ovd"/>
+                        <segue destination="hPp-My-Hli" kind="push" identifier="pushToMeetupSegue" id="u6e-br-6mq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJr-D0-NQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="186"/>
+
+            <point key="canvasLocation" x="1550" y="34"/>
+
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pVR-fW-ML2">

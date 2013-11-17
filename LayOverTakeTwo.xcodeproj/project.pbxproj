@@ -64,6 +64,14 @@
 		8FD2D93418388141004BCA3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD2D93318388141004BCA3E /* MapKit.framework */; };
 		8FE123DA18393220001578DE /* MeetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE123D918393220001578DE /* MeetupViewController.m */; };
 		8FE123DD183938A5001578DE /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE123DC183938A5001578DE /* MeetupDetailViewController.m */; };
+		8FF447631839516200C8BFD8 /* yvr001.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF447621839516200C8BFD8 /* yvr001.png */; };
+		8FF447651839516900C8BFD8 /* yvr002.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF447641839516900C8BFD8 /* yvr002.png */; };
+		8FF447671839516F00C8BFD8 /* yvr003.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF447661839516F00C8BFD8 /* yvr003.png */; };
+		8FF447691839517500C8BFD8 /* yvr004.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF447681839517500C8BFD8 /* yvr004.png */; };
+		8FF4476B1839570C00C8BFD8 /* yvr001i.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF4476A1839570C00C8BFD8 /* yvr001i.png */; };
+		8FF4476D1839571300C8BFD8 /* yvr002i.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF4476C1839571300C8BFD8 /* yvr002i.png */; };
+		8FF4476F1839571A00C8BFD8 /* yvr003i.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF4476E1839571A00C8BFD8 /* yvr003i.png */; };
+		8FF447711839572000C8BFD8 /* yvr004i.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF447701839572000C8BFD8 /* yvr004i.png */; };
 		94BBB87B183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
 		94BBB87C183891AF00B99F8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BBB87A183891AF00B99F8E /* Parse.framework */; };
 /* End PBXBuildFile section */
@@ -150,6 +158,14 @@
 		8FE123D918393220001578DE /* MeetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupViewController.m; sourceTree = "<group>"; };
 		8FE123DB183938A5001578DE /* MeetupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupDetailViewController.h; sourceTree = "<group>"; };
 		8FE123DC183938A5001578DE /* MeetupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupDetailViewController.m; sourceTree = "<group>"; };
+		8FF447621839516200C8BFD8 /* yvr001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr001.png; sourceTree = "<group>"; };
+		8FF447641839516900C8BFD8 /* yvr002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr002.png; sourceTree = "<group>"; };
+		8FF447661839516F00C8BFD8 /* yvr003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr003.png; sourceTree = "<group>"; };
+		8FF447681839517500C8BFD8 /* yvr004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr004.png; sourceTree = "<group>"; };
+		8FF4476A1839570C00C8BFD8 /* yvr001i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr001i.png; sourceTree = "<group>"; };
+		8FF4476C1839571300C8BFD8 /* yvr002i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr002i.png; sourceTree = "<group>"; };
+		8FF4476E1839571A00C8BFD8 /* yvr003i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr003i.png; sourceTree = "<group>"; };
+		8FF447701839572000C8BFD8 /* yvr004i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yvr004i.png; sourceTree = "<group>"; };
 		94BBB87A183891AF00B99F8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +286,14 @@
 		8FAF00B9183835EA000473DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8FF447621839516200C8BFD8 /* yvr001.png */,
+				8FF447641839516900C8BFD8 /* yvr002.png */,
+				8FF447661839516F00C8BFD8 /* yvr003.png */,
+				8FF447681839517500C8BFD8 /* yvr004.png */,
+				8FF4476A1839570C00C8BFD8 /* yvr001i.png */,
+				8FF4476C1839571300C8BFD8 /* yvr002i.png */,
+				8FF4476E1839571A00C8BFD8 /* yvr003i.png */,
+				8FF447701839572000C8BFD8 /* yvr004i.png */,
 				29436D3C183914AC009E7B4E /* profileBG9.png */,
 				29436D3D183914AC009E7B4E /* profileBG8.png */,
 				29436D3E183914AC009E7B4E /* profileBG7.png */,
@@ -365,7 +389,7 @@
 				ORGANIZATIONNAME = "Ashish Agarwal";
 				TargetAttributes = {
 					8FAF00AE183835EA000473DA = {
-						DevelopmentTeam = B2T72YBCCD;
+						DevelopmentTeam = K8UD3JJ3Y5;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -401,30 +425,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF447651839516900C8BFD8 /* yvr002.png in Resources */,
 				29436D331838B9B9009E7B4E /* startupShort.png in Resources */,
 				29436D47183914AC009E7B4E /* profileBG7.png in Resources */,
 				29398DA9183958B700DF34E4 /* chatIcon.png in Resources */,
 				8FAF00CB183835EA000473DA /* Images.xcassets in Resources */,
 				29436D5518391DEC009E7B4E /* outbound.png in Resources */,
+				8FF447631839516200C8BFD8 /* yvr001.png in Resources */,
 				29436D45183914AC009E7B4E /* profileBG9.png in Resources */,
 				8FAF00BD183835EA000473DA /* InfoPlist.strings in Resources */,
 				29436D4A183914AC009E7B4E /* profileBG4.png in Resources */,
 				29436D48183914AC009E7B4E /* profileBG6.png in Resources */,
+				8FF4476D1839571300C8BFD8 /* yvr002i.png in Resources */,
 				29436D311838B44E009E7B4E /* logo.png in Resources */,
 				29436D301838B44E009E7B4E /* Start-up.png in Resources */,
 				29436D5418391DEC009E7B4E /* inbound.png in Resources */,
 				29436D4D183914AC009E7B4E /* profileBG1.png in Resources */,
 				29436D351838F666009E7B4E /* triangle.png in Resources */,
 				29436D49183914AC009E7B4E /* profileBG5.png in Resources */,
+				8FF4476B1839570C00C8BFD8 /* yvr001i.png in Resources */,
 				8FAF00C6183835EA000473DA /* Main.storyboard in Resources */,
 				29436D2F1838B44E009E7B4E /* facebookButton.png in Resources */,
+				8FF4476F1839571A00C8BFD8 /* yvr003i.png in Resources */,
 				29398DA118393AB100DF34E4 /* planeDown.png in Resources */,
+				8FF447671839516F00C8BFD8 /* yvr003.png in Resources */,
 				29436D4C183914AC009E7B4E /* profileBG2.png in Resources */,
 				29398DA018393AB100DF34E4 /* planeUp.png in Resources */,
 				29436D46183914AC009E7B4E /* profileBG8.png in Resources */,
 				2997CA491839338B00515514 /* UnknownProfile.png in Resources */,
 				29436D4B183914AC009E7B4E /* profileBG3.png in Resources */,
 				29398DAA183958B700DF34E4 /* handshake.png in Resources */,
+				29436D5118391DC9009E7B4E /* chatIcon.png in Resources */,
+				8FF447711839572000C8BFD8 /* yvr004i.png in Resources */,
+				29436D4B183914AC009E7B4E /* profileBG3.png in Resources */,
+				8FF447691839517500C8BFD8 /* yvr004.png in Resources */,
+				29398DA31839434B00DF34E4 /* handshake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					.,
 					/Users/ryan/Dev/LayOver,
@@ -598,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					.,
 					/Users/ryan/Dev/LayOver,

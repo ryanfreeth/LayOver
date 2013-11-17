@@ -7,11 +7,15 @@
 //
 
 #import "MeetupViewController.h"
+#import "MeetupDetailViewController.h"
 #import "Parse/Parse.h"
 
 @interface MeetupViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *vendorLocations;
 @property (strong, nonatomic) NSArray *vendorList;
+@property (nonatomic) NSInteger selectedRow;
+
+
 @end
 
 @implementation MeetupViewController
@@ -33,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Vendors Nearby";
 	
 }
 
@@ -56,7 +61,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //PFObject *vendorObject = [self.vendorList objectAtIndex:indexPath.row];
+    self.selectedRow = indexPath.row;
     [self performSegueWithIdentifier:@"detailMeetupSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"detailMeetupSegue"]) {
+        MeetupDetailViewController *vc = [segue destinationViewController];
+        [vc setVendorObj:[self.vendorList objectAtIndex:self.selectedRow]];
+    }
 }
 
 - (void)didReceiveMemoryWarning

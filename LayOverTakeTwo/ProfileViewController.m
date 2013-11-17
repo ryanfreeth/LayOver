@@ -9,6 +9,9 @@
 #import "ProfileViewController.h"
 
 @interface ProfileViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *meetUpButton;
+
+-(IBAction)meetUpButtonPressed:(id)sender;
 
 @end
 
@@ -125,6 +128,10 @@
 
 - (IBAction)logoutButtonClicked:(UIButton *)sender {
     [self logoutButtonTouchHandler:nil];
+}
+
+-(IBAction)meetUpButtonPressed:(id)sender{
+    [self performSegueWithIdentifier:@"pushToMeetupSegue" sender:self];
 }
 
 #pragma mark - NSURLConnectionDataDelegate

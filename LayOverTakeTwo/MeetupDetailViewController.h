@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse/Parse.h"
 
 @interface MeetupDetailViewController : UIViewController
+@property (strong, nonatomic) PFObject *vendorObj;
 
 @end
